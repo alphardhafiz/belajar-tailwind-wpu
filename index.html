@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Belajar TailwindCSS</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            spacing: {
+              13: "3.25rem",
+            },
+            fontFamily: {
+              inter: ["Inter"],
+            },
+            colors: {
+              apis: "#bada55",
+              kopi: "#c0ffee",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      #toggle:checked ~ label div.toggle-circle {
+        @apply translate-x-3;
+      }
+    </style>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-200">
+    <h1 class="text-8xl font-bold text-center my-10">
+      Mari Belajar
+      <span
+        class="bg-gradient-to-r from-blue-500 to-teal-400 bg-clip-text text-transparent"
+        >TailwindCSS</span
+      >
+    </h1>
+
+    <section
+      class="mb-10 bg-gradient-to-tr from-indigo-200 via-red-300 to-yellow-500"
+    >
+      <h2 class="my-12 text-3l text-center">Spacing</h2>
+      <div class="m-13">Margin</div>
+      <div class="py-8">Padding</div>
+    </section>
+
+    <section class="mb-10 bg-green-200">
+      <h2 class="my-12 text-3l text-center">Sizing</h2>
+      <div class="w-32 h-32 bg-kopi">Kotak 1</div>
+    </section>
+
+    <section class="font-inter max-w-4xl mx-auto">
+      <h2 class="mb-2 text-4xl font-bold">
+        Belajar Mengenai Typography pada Tailwind CSS
+      </h2>
+      <div class="mb-4 text-lg text-gray-500">
+        By <a href="#" class="text-grey-700 font-semibold">Sandhika Galih</a>, 1
+        Januari 2022
+      </div>
+      <p class="mb-4">
+        Lorem, ipsum dolor sit amet
+        <a href="#" class="underline font-semibold text-blue-600"
+          >consectetur</a
+        >
+        adipisicing elit. Sit odit similique dolores possimus vel in sint odio,
+        aspernatur rem doloremque beatae, quae quis magnam quaerat officia ipsa
+        optio tenetur doloribus sequi dolore reprehenderit. Eaque, corporis ab
+        nulla veritatis sapiente molestias eius quo iusto consequuntur porro
+        magni repudiandae error quia ad.
+      </p>
+      <blockquote class="mb-4 italic font-extralight">
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+        suscipit earum ratione delectus ipsum vitae iste pariatur consectetur
+        harum magnam?""
+      </blockquote>
+      <p class="mb-4">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem, ad
+        optio sapiente facilis eos tempore, quo doloremque atque reprehenderit
+        sequi iusto cumque culpa suscipit ipsum doloribus, provident nemo enim
+        fugit.
+      </p>
+    </section>
+
+    <div
+      class="max-w-xl h-96 bg-[#bada55] mx-auto mt-[42px] overflow-y-scroll bg-fixed"
+      style="background-image: url('https://source.unsplash.com/1000x600?sky')"
+    >
+      <p class="p-5 text-2xl">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi,
+        explicabo nesciunt molestias qui, facilis quibusdam nobis delectus, quo
+        adipisci magnam aliquam dolorem vitae. Quasi ut sint assumenda illum
+        autem veniam eaque soluta vero omnis suscipit aliquid nisi cumque
+        veritatis alias consequuntur pariatur velit laborum possimus deleniti,
+        voluptas obcaecati fugiat rem? Perspiciatis harum ex minus laboriosam
+        beatae voluptas, rem numquam, ab inventore nisi pariatur incidunt
+        laudantium optio tenetur dignissimos odit, vel fugiat veniam laborum.
+        Hic perspiciatis voluptatibus reiciendis ipsa. Dolorem aliquam culpa sit
+        inventore libero provident assumenda architecto necessitatibus iure,
+        possimus vel hic ipsum aspernatur, reiciendis at nostrum quia aliquid
+        iusto. Necessitatibus, nihil rem beatae culpa fugit incidunt totam,
+        corrupti provident ipsum iusto, ab dolore consectetur aliquam quis
+        molestiae excepturi magni eveniet. Dignissimos necessitatibus minus
+        beatae sint nisi molestias rerum voluptate! Reprehenderit, beatae in
+        dolores odio ab nam iste culpa soluta, minus magnam neque id iure
+        consequatur inventore odit sit mollitia iusto similique molestiae
+        officia? Dolore tenetur molestias porro fuga rerum error id, nobis
+        cupiditate quo, similique quae amet pariatur dicta quos nam. Dicta ut
+        voluptates facere debitis reprehenderit ducimus voluptas animi harum,
+        enim repellendus velit corrupti dolores quod aliquam illo fugit
+        voluptatum qui accusantium odio labore, nulla ratione molestias
+        corporis!
+      </p>
+    </div>
+
+    <div
+      class="mt-32 max-w-xl mx-auto h-96 bg-slate-300 bg-contain bg-no-repeat bg-center rounded-2xl border-slate-500 shadow-xl shadow-slate-500 overflow-hidden border-8 flex"
+      style="background-image: url('img/1.jfif')"
+    >
+      <div
+        class="w-[200px] h-[200px] bg-white/30 m-auto backdrop-blur-md"
+      ></div>
+    </div>
+
+    <hr class="my-20" />
+
+    <div class="flex justify-center">
+      <span class="text-sm text-slate-500 mr-2">Light</span>
+      <input type="checkbox" id="toggle" class="hidden" />
+      <label for="toggle">
+        <div
+          class="w-9 h-5 bg-slate-500 rounded-full flex items-center p-1 cursor-pointer"
+        >
+          <div class="w-4 h-4 bg-white rounded-full toggle-circle"></div>
+        </div>
+      </label>
+      <span class="text-sm text-slate-500 ml-2">Dark</span>
+    </div>
+
+    <button
+      class="my-10 bg-sky-500 px-5 py-2 rounded-full text-white font-semibold block font-inter transition-colors mx-auto hover:bg-sky-600 active:bg-sky-700 focus:ring focus:ring-sky-300 dark:bg-slate-300 dark:text-slate-800 dark:hover:text-slate-900 dark:hover:bg-slate-100"
+    >
+      Simpan
+    </button>
+
+    <div
+      class="max-w-lg my-10 border border-slate-200 rounded-xl mx-auto p-5 shadow-md font-inter hover:bg-sky-500 group font-serif dark:hover:bg-slate-300"
+    >
+      <h5
+        class="font-bold text-slate-700 text-lg mb-3 group-hover:text-white dark:group-hover:text-slate-800"
+      >
+        My Card
+      </h5>
+      <p
+        class="text-slate-600 group-hover:text-white selection:bg-lime-300 selection:text-slate-900 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:float-left first-letter:mr-3 dark:group-hover:text-slate-800"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+        perferendis sequi corrupti ipsa repudiandae quia debitis mollitia cum
+        ipsam asperiores, impedit totam molestiae doloremque laudantium laborum
+        qui dolorum fugiat distinctio?
+      </p>
+    </div>
+
+    <div
+      class="max-w-lg border-slate-200 rounded-xl mx-auto shadow-md font-inter p-5"
+    >
+      <form action="">
+        <label for="email">
+          <span
+            class="block font-semibold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 after:ml-0.5"
+            >Email</span
+          >
+          <input
+            type="email"
+            name=""
+            id="email"
+            placeholder="masukkan email..."
+            class="px-3 py-2 border shadow rounded w-full block text-sm placeholder:text-slate-400 focus:outline-none focus:ring-1 focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700 invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"
+          />
+          <p class="text-sm m-1 text-pink-700 invisible peer-invalid:visible">
+            Email tidak valid
+          </p>
+        </label>
+      </form>
+    </div>
+
+    <div class="mb-96"></div>
+
+    <script>
+      const checkbox = document.querySelector("#toggle");
+      const html = document.querySelector("html");
+
+      checkbox.addEventListener("click", function () {
+        checkbox.checked
+          ? html.classList.add("dark")
+          : html.classList.remove("dark");
+      });
+    </script>
+  </body>
+</html>
